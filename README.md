@@ -2,7 +2,7 @@
 
 Uma aplicação Full-Stack desenvolvida com **Test-Driven Development (TDD)** e Design responsivo Premium.
 
-## 🛠️ Tecnologias
+## Tecnologias
 
 - **Backend:** Node.js, Express, TypeScript, Jest (Testes Unitários)
 - **Frontend:** Vanilla JavaScript, HTML5 Estruturado, Vanilla CSS (Glassmorphism UI)
