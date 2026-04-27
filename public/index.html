@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Premium</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="site-background" style="background-image: url('bg-loja.jpg');"></div>
+
+    <div class="container">
+        
+        <!-- Sidebar de Filtros Profiler (Deep Categorization) -->
+        <aside class="filter-sidebar glass-panel">
+            <div class="filter-header">
+                <h2>Filtros</h2>
+                <button id="clear-filters" class="clear-btn">Limpar</button>
+            </div>
+            
+            <div class="filter-group">
+                <h3>Faixa de Preço</h3>
+                <div class="price-inputs">
+                    <input type="number" id="min-price" placeholder="R$ Min" min="0">
+                    <span>-</span>
+                    <input type="number" id="max-price" placeholder="R$ Max" min="0">
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <h3>Camisetas</h3>
+                <div class="size-pills">
+                    <button class="size-pill" data-cat="camiseta" data-value="P">P</button>
+                    <button class="size-pill" data-cat="camiseta" data-value="M">M</button>
+                    <button class="size-pill" data-cat="camiseta" data-value="G">G</button>
+                    <button class="size-pill" data-cat="camiseta" data-value="GG">GG</button>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <h3>Moletons e Jaquetas</h3>
+                <div class="size-pills">
+                    <button class="size-pill" data-cat="moletom" data-value="P">P</button>
+                    <button class="size-pill" data-cat="moletom" data-value="M">M</button>
+                    <button class="size-pill" data-cat="moletom" data-value="G">G</button>
+                    <button class="size-pill" data-cat="moletom" data-value="GG">GG</button>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <h3>Calças</h3>
+                <div class="size-pills">
+                    <button class="size-pill" data-cat="calca" data-value="P">P</button>
+                    <button class="size-pill" data-cat="calca" data-value="M">M</button>
+                    <button class="size-pill" data-cat="calca" data-value="G">G</button>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <h3>Tênis</h3>
+                <div class="size-pills">
+                    <button class="size-pill" data-cat="tenis" data-value="38">38</button>
+                    <button class="size-pill" data-cat="tenis" data-value="39">39</button>
+                    <button class="size-pill" data-cat="tenis" data-value="40">40</button>
+                    <button class="size-pill" data-cat="tenis" data-value="41">41</button>
+                    <button class="size-pill" data-cat="tenis" data-value="42">42</button>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <h3>Acessórios</h3>
+                <div class="size-pills">
+                    <button class="size-pill" data-cat="acessorio" data-value="Unico">Único</button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Vitrine Central -->
+        <main class="store">
+            <header>
+                <h1>Urban <span>Sneakers</span></h1>
+                <p>Equipamentos de alta performance e design exclusivo.</p>
+            </header>
+            
+            <div class="product-grid" id="product-grid">
+                <!-- A MÁGICA ACONTECE AQUI. O app.js vai cuspir produtos aqui dentro. -->
+            </div>
+        </main>
+
+        <!-- Sidebar do Carrinho (COLUNA DA DIREITA) -->
+        <aside class="cart-sidebar glass-panel">
+            <div class="cart-header">
+                <h2>Cesta</h2>
+                <span id="badge" class="badge">0</span>
+            </div>
+            
+            <div class="cart-items" id="cart-items"></div>
+
+            <div class="cart-footer">
+                <div class="total-row">
+                    <span>Total</span>
+                    <strong id="cart-total">R$ 0,00</strong>
+                </div>
+                <button class="checkout-btn">Finalizar <span class="arrow">→</span></button>
+            </div>
+        </aside>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
